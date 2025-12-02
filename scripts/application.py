@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 
 # Load the trained model and scaler
-model = pickle.load(open('model_compressed.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 scaler = pickle.load(open('scaler.pkl', 'rb'))
 
 # Streamlit app title
@@ -39,5 +39,6 @@ if st.button("🔮 Predict Gold Price"):
 
     # Display the result
     st.success(f"Predicted Gold Price (GLD): **{prediction[0]:.2f}** USD")
+
 
 
